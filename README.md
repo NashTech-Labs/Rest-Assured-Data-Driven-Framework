@@ -46,5 +46,12 @@ These are the main keypoints for having an data driven approach in our testing f
 5. Any changes in the test script do not have any sideffect on the test data.
 6. To create an individual test for each data set is a lengthy and time-consuming process. Data Driven Testing framework resolves this issue by keeping the data separate from Functional tests.
 
+In order to run the test, we just have to go into the directory ../Rest-Assured-Data-Driven-Framework/DataDrivenFramework-RestAssured and run the command
+
+mvn -Dtest=ReadFile test
+
+
+
+
 
 
