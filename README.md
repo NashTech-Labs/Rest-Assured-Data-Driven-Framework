@@ -50,7 +50,9 @@ In order to run the test, we just have to go into the directory ../Rest-Assured-
 
 mvn -Dtest=ReadFile test
 
+But first export the data file path before executing the tests
 
+export filePath='path_to_your_data_file'
 
 
 

@@ -1,7 +1,8 @@
 package com.knoldus;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
+import java.io.*;
+
+import com.typesafe.config.Config;
+import com.typesafe.config.ConfigFactory;
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
@@ -9,8 +10,16 @@ import org.apache.poi.ss.usermodel.DataFormatter;
 
 public class GetExcel {
 
+
     public static String getData(int page, int row, int col) throws FileNotFoundException {
-        String excelPath = "src/test/resources/testData.xlsx"; // path where the xlsx file is saved
+
+        Config config = ConfigFactory.load("application.conf");
+        String filePath = config.getString("excelData"); // using typesafe config to read file path from terminal
+
+        // use this command before executing the tests
+        // export filePath='src/test/resources/testData.xlsx' :- for refrence one file is already there in the resource folder
+
+        String excelPath = filePath; // path where the xlsx file is saved
         FileInputStream excelFile = new FileInputStream(excelPath);
         XSSFWorkbook workBook = null; // initializing it null so the exception could be caught.
         try {
