@@ -70,14 +70,15 @@ In order to run the test, we just have to go into the directory
 
 2.  Export the data file path before executing the tests
 
-For better understanding, checkout this blog
-https://blog.knoldus.com/rest-assured-with-apache-poi/rt filePath='path_to_your_data_file'
+export filePath='path_to_your_data_file'
 
 3. Run the test command
 
 mvn -Dtest=ReadFile test
 
 
+For better understanding, checkout this blog
+https://blog.knoldus.com/rest-assured-with-apache-poi/
 
 
 
