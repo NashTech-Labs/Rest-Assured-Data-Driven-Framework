@@ -52,7 +52,8 @@ mvn -Dtest=ReadFile test
 
 But first export the data file path before executing the tests
 
-export filePath='path_to_your_data_file'
+For better understanding, checkout this blog
+https://blog.knoldus.com/rest-assured-with-apache-poi/rt filePath='path_to_your_data_file'
 
 
 
